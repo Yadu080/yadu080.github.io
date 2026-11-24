@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voice·PD — Yadunandan M Nimbalkar</title>
+  <meta name="description" content="A multilingual self-supervised speech model (wav2vec2-XLS-R) that screens for Parkinson&#x27;s from a sustained vowel — evaluated with subject-grouped cross-validation.">
+  <meta property="og:title" content="Yadunandan M Nimbalkar — AI / ML Engineer">
+  <meta property="og:description" content="Portfolio of Yadunandan M Nimbalkar — AI/ML engineer building recommendation systems, RAG assistants, speech and vision models in Bengaluru.">
+  <meta name="theme-color" content="#0c0c0a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230c0c0a'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%23ff4d1a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="/static/portfolio/css/site.css">
+  <link rel="stylesheet" href="/static/portfolio/css/sections.css">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+    // Never leave content hidden if animation scripts fail to load.
+    setTimeout(function () { if (!window.__siteReady) document.documentElement.classList.remove('motion'); }, 2500);
+  </script>
+  
+</head>
+<body class="is-project">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <a class="nav__mark" href="/" aria-label="Yadunandan M Nimbalkar, home">
+      <span class="nav__dot" aria-hidden="true"></span>
+      <span>Yadunandan M Nimbalkar</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/#work" data-link>Work</a>
+      <a href="/#archive" data-link>Archive</a>
+      <a href="/#record" data-link>Record</a>
+      <a href="/#contact" data-link>Contact</a>
+    </nav>
+    <div class="nav__meta mono">
+      <span data-clock data-tz="Asia/Kolkata">—</span>
+      <span class="nav__sep" aria-hidden="true">/</span>
+      <span>Bengaluru, India</span>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
+      <span class="sr-only">Menu</span><span class="nav__bars" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" data-menu hidden>
+    <nav aria-label="Mobile">
+      <a href="/#work">Work</a>
+      <a href="/#archive">Archive</a>
+      <a href="/#record">Record</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <div class="menu__foot mono">
+      <a href="https://github.com/Yadu080" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/yadunandan-m-nimbalkar-45950b211/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+
+  <main id="main">
+    
+<article class="case">
+  <header class="case__hero wrap">
+    <a class="case__back mono" href="/#work">← All work</a>
+    <p class="label" data-hero-fade>AI for health · 2026</p>
+    <h1 class="case__title"><span class="hero__line"><span data-split>Voice·PD</span></span></h1>
+    <p class="case__kicker" data-hero-fade>Screening for Parkinson&#x27;s disease from three seconds of voice.</p>
+
+    <dl class="case__facts" data-hero-fade>
+      <div><dt class="label">Role</dt><dd>Co-developed · team</dd></div>
+      <div><dt class="label">Discipline</dt><dd>AI for Health</dd></div>
+      <div class="case__facts-stack"><dt class="label">Stack</dt><dd>Python, PyTorch, wav2vec2-XLS-R, scikit-learn, XGBoost, LightGBM, Flask</dd></div>
+      <div><dt class="label">Links</dt><dd class="case__links">
+        
+        <a class="link" href="https://github.com/Yadu080/Parkinson-s_voice_detection" target="_blank" rel="noopener">Code ↗</a>
+        
+        
+      </dd></div>
+    </dl>
+  </header>
+
+  <figure class="case__cover wrap" data-reveal-media>
+    
+      <img src="/media/projects/voicepd-hero.webp" alt="Voice·PD — interface screenshot" decoding="async">
+    
+  </figure>
+
+  
+  <dl class="case__metrics wrap">
+    
+      <div data-reveal><dt>cross-validated AUC (± 0.034)</dt><dd>0.972</dd></div>
+    
+      <div data-reveal><dt>subject-level accuracy, 58 of 61</dt><dd>95.1%</dd></div>
+    
+      <div data-reveal><dt>AUC of hand-crafted features across languages — why we shipped wav2vec2</dt><dd>0.31</dd></div>
+    
+      <div data-reveal><dt>of “aaah” is enough</dt><dd>3 s</dd></div>
+    
+  </dl>
+  
+
+  <div class="case__content wrap">
+    <aside class="case__aside">
+      <p class="label">Summary</p>
+      <p class="case__summary">A multilingual self-supervised speech model (wav2vec2-XLS-R) that screens for Parkinson&#x27;s from a sustained vowel — evaluated with subject-grouped cross-validation.</p>
+    </aside>
+    <div class="prose">
+      
+        <h2>The approach</h2>
+<p>Two pipelines were compared on 831 recordings from 61 subjects:</p>
+<ul>
+<li><strong>Frozen wav2vec2-XLS-R embeddings</strong> (1024-dimensional, pretrained on 128 languages) feeding a logistic regression</li>
+<li><strong>A 56-feature acoustic pipeline</strong> — jitter, shimmer, MDVP measures — feeding an XGBoost, LightGBM and Random Forest ensemble</li>
+</ul>
+<h2>Honest evaluation</h2>
+<p>Everything is evaluated with 5-fold <strong>subject-grouped</strong> cross-validation, so no speaker ever appears in both train and test. Results: CV AUC 0.972 ± 0.034, F1 0.945, subject-level accuracy 95.1% (58/61).</p>
+<h2>The cross-language finding</h2>
+<p>Hand-crafted acoustic features looked strong in-language but collapsed across languages — Italian-trained to English-tested AUC of <strong>0.31</strong>, worse than chance. The multilingual self-supervised model did not care what language you speak, so that is the model that shipped, behind a Flask API accepting six audio formats.</p>
+<p><em>A screening prototype, not a diagnostic tool.</em></p>
+      
+    </div>
+  </div>
+
+  
+
+  
+  <a class="next" href="/work/civicpulse-ai/">
+    <span class="label wrap">Next project</span>
+    <span class="next__title wrap">CivicPulse AI <span aria-hidden="true">→</span></span>
+  </a>
+  
+</article>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <p class="footer__bio">AI &amp; ML engineering student at Global Academy of Technology, Bengaluru. Builds recommendation systems, retrieval-augmented assistants, speech and vision models, and the interfaces that make them explorable.</p>
+      <div>
+        <h2 class="label">Index</h2>
+        <ul class="footer__list">
+          <li><a href="/#work">Selected work</a></li>
+          <li><a href="/#archive">Archive</a></li>
+          <li><a href="/#record">Record</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="label">Elsewhere</h2>
+        <ul class="footer__list">
+          <li><a href="https://github.com/Yadu080" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/yadunandan-m-nimbalkar-45950b211/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://x.com/Techyness_8" target="_blank" rel="noopener">X / Twitter ↗</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="footer__base mono">
+      <span>© 2026 Yadunandan M Nimbalkar</span>
+      <span>Built with Django, Three.js &amp; GSAP</span>
+      <a href="#main" data-top>Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="/static/portfolio/js/covers.js" defer></script>
+  <script src="/static/portfolio/js/site.js" defer></script>
+  
+</body>
+</html>

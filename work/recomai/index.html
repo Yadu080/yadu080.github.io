@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RECOMAI — Yadunandan M Nimbalkar</title>
+  <meta name="description" content="Two-tower neural retrieval over MovieLens 20M, gradient-boosted re-ranking with an explanation for every pick, cold-start onboarding and a streaming-style React front end.">
+  <meta property="og:title" content="Yadunandan M Nimbalkar — AI / ML Engineer">
+  <meta property="og:description" content="Portfolio of Yadunandan M Nimbalkar — AI/ML engineer building recommendation systems, RAG assistants, speech and vision models in Bengaluru.">
+  <meta name="theme-color" content="#0c0c0a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230c0c0a'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%23ff4d1a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="/static/portfolio/css/site.css">
+  <link rel="stylesheet" href="/static/portfolio/css/sections.css">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+    // Never leave content hidden if animation scripts fail to load.
+    setTimeout(function () { if (!window.__siteReady) document.documentElement.classList.remove('motion'); }, 2500);
+  </script>
+  
+</head>
+<body class="is-project">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <a class="nav__mark" href="/" aria-label="Yadunandan M Nimbalkar, home">
+      <span class="nav__dot" aria-hidden="true"></span>
+      <span>Yadunandan M Nimbalkar</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/#work" data-link>Work</a>
+      <a href="/#archive" data-link>Archive</a>
+      <a href="/#record" data-link>Record</a>
+      <a href="/#contact" data-link>Contact</a>
+    </nav>
+    <div class="nav__meta mono">
+      <span data-clock data-tz="Asia/Kolkata">—</span>
+      <span class="nav__sep" aria-hidden="true">/</span>
+      <span>Bengaluru, India</span>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
+      <span class="sr-only">Menu</span><span class="nav__bars" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" data-menu hidden>
+    <nav aria-label="Mobile">
+      <a href="/#work">Work</a>
+      <a href="/#archive">Archive</a>
+      <a href="/#record">Record</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <div class="menu__foot mono">
+      <a href="https://github.com/Yadu080" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/yadunandan-m-nimbalkar-45950b211/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+
+  <main id="main">
+    
+<article class="case">
+  <header class="case__hero wrap">
+    <a class="case__back mono" href="/#work">← All work</a>
+    <p class="label" data-hero-fade>Recommendation systems · 2026</p>
+    <h1 class="case__title"><span class="hero__line"><span data-split>RECOMAI</span></span></h1>
+    <p class="case__kicker" data-hero-fade>A two-stage neural movie recommender, built from scratch and deployed.</p>
+
+    <dl class="case__facts" data-hero-fade>
+      <div><dt class="label">Role</dt><dd>Solo build</dd></div>
+      <div><dt class="label">Discipline</dt><dd>Machine Learning</dd></div>
+      <div class="case__facts-stack"><dt class="label">Stack</dt><dd>Python, PyTorch, scikit-learn, FastAPI, PostgreSQL, React, Tailwind CSS</dd></div>
+      <div><dt class="label">Links</dt><dd class="case__links">
+        <a class="link" href="https://two-tower-recommendation-system.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+        <a class="link" href="https://github.com/Yadu080/Two-Tower_Recommendation_System" target="_blank" rel="noopener">Code ↗</a>
+        
+        
+      </dd></div>
+    </dl>
+  </header>
+
+  <figure class="case__cover wrap" data-reveal-media>
+    
+      <img src="/media/projects/recomai-landing.webp" alt="RECOMAI — interface screenshot" decoding="async">
+    
+  </figure>
+
+  
+  <dl class="case__metrics wrap">
+    
+      <div data-reveal><dt>Recall@100 on 2,000 held-out users</dt><dd>29.5%</dd></div>
+    
+      <div data-reveal><dt>retrieval → ranked results</dt><dd>~20 ms</dd></div>
+    
+      <div data-reveal><dt>honest validation AUC after a leakage audit (was 0.98)</dt><dd>0.93</dd></div>
+    
+      <div data-reveal><dt>films in the served catalogue</dt><dd>10,523</dd></div>
+    
+  </dl>
+  
+
+  <div class="case__content wrap">
+    <aside class="case__aside">
+      <p class="label">Summary</p>
+      <p class="case__summary">Two-tower neural retrieval over MovieLens 20M, gradient-boosted re-ranking with an explanation for every pick, cold-start onboarding and a streaming-style React front end.</p>
+    </aside>
+    <div class="prose">
+      
+        <h2>The problem</h2>
+<p>Scoring every one of 10,523 films with a heavyweight model on each page load is too slow. RECOMAI splits the work into two stages with very different cost profiles — the standard industry answer, implemented end to end.</p>
+<h2>Stage 1 — Retrieval</h2>
+<p>Each user is a 128-dimensional vector combining a learned ID embedding with a normalised genre-preference vector. Both towers L2-normalise their output, so the dot product <em>is</em> cosine similarity and retrieval collapses to a single matrix multiply. The top 500 candidates survive. The network is trained with an InfoNCE loss on MovieLens 20M (20M ratings from 138,493 users).</p>
+<h2>Stage 2 — Re-ranking</h2>
+<p>The 500 candidates pass through a gradient-boosted classifier scoring each (user, movie) pair on eight engineered features — embedding similarity, average rating, popularity, genre overlap and cross terms. Every result is annotated with <em>why</em> it was chosen.</p>
+<h2>The leakage audit</h2>
+<p>The first ranker reported a validation AUC of 0.98 — too good to be true. Tracing the features revealed label leakage in ranker training. Fixing it dropped AUC to an <strong>honest 0.93</strong>, which is the number reported.</p>
+<h2>Cold start</h2>
+<p>New users have no learned embedding, so one is synthesised by averaging the item vectors of films in their chosen genres — placing them in the same space as trained users with no special-casing downstream.</p>
+<h2>Results</h2>
+<ul>
+<li>Recall@10 = 11.7% (about 123× random), Recall@100 = 29.5%, NDCG@100 = 11.2% on 2,000 held-out users</li>
+<li>~20 ms typical latency from retrieval to ranked results, served by FastAPI + PostgreSQL</li>
+</ul>
+      
+    </div>
+  </div>
+
+  
+  <div class="case__gallery wrap">
+    
+      <figure data-reveal-media>
+        <img src="/media/projects/gallery/recomai-genres.webp" alt="Cold-start genre picker — a taste vector from three clicks" loading="lazy" decoding="async">
+        <figcaption class="mono">Cold-start genre picker — a taste vector from three clicks</figcaption>
+      </figure>
+    
+  </div>
+  
+
+  
+  <a class="next" href="/work/silence-engine/">
+    <span class="label wrap">Next project</span>
+    <span class="next__title wrap">Silence Engine <span aria-hidden="true">→</span></span>
+  </a>
+  
+</article>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <p class="footer__bio">AI &amp; ML engineering student at Global Academy of Technology, Bengaluru. Builds recommendation systems, retrieval-augmented assistants, speech and vision models, and the interfaces that make them explorable.</p>
+      <div>
+        <h2 class="label">Index</h2>
+        <ul class="footer__list">
+          <li><a href="/#work">Selected work</a></li>
+          <li><a href="/#archive">Archive</a></li>
+          <li><a href="/#record">Record</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="label">Elsewhere</h2>
+        <ul class="footer__list">
+          <li><a href="https://github.com/Yadu080" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/yadunandan-m-nimbalkar-45950b211/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://x.com/Techyness_8" target="_blank" rel="noopener">X / Twitter ↗</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="footer__base mono">
+      <span>© 2026 Yadunandan M Nimbalkar</span>
+      <span>Built with Django, Three.js &amp; GSAP</span>
+      <a href="#main" data-top>Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="/static/portfolio/js/covers.js" defer></script>
+  <script src="/static/portfolio/js/site.js" defer></script>
+  
+</body>
+</html>
